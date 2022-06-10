@@ -1,0 +1,37 @@
+.more_icon{
+  position: absolute;
+  right: -38px;
+  bottom: -32px;
+}
+
+.story_img{
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+
+
+.box{
+  width: 80%;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding:30px 0px;
+}
+@media screen and (max-width:900px){
+  .box{
+    flex-direction: column;
+    justify-content: center;
+  }
+}
+@media screen and (max-width:480px){
+  .img{
+    width: 80%;
+  }
+  .more_icon{
+   width: 30%;
+   right: 61px;
+    bottom: -12px;
+  }
+}
