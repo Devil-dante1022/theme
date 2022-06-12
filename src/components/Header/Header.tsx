@@ -3,12 +3,18 @@ import {
   Box,
   Container,
   Stack,
-  Button
+  Button,
+  IconButton
 } from '@mui/material';
+
+
 import {styled, Theme} from '@mui/material/styles';
 import {createStyles, makeStyles} from '@mui/styles';
 import { useState } from 'react';
 import styles from  './Header.module.css';
+import WalletConnect from '../WalletConnect/WalletConnect';
+import NightsStayIcon from '@mui/icons-material/NightsStay';
+import LightModeIcon from '@mui/icons-material/LightMode';
 
 const useStyles = makeStyles((theme:Theme) => 
   createStyles({
@@ -53,6 +59,7 @@ const Header = (props:any) => {
       <Box className={classes.header}>
         <Box className={classes.body}>
           <img style={{padding:'40px 0px'}} src='./assets/image/logo.png'></img>
+          <WalletConnect/>
           <Box className={classes.menuList}>
             <a href=''>Home</a>
             <a href=''>Roadmap</a>
@@ -67,7 +74,11 @@ const Header = (props:any) => {
             <img src='./assets/image/Facebook.png'></img>
             <img src='./assets/image/Twitter.png'></img>
           </Stack>
-          <Button onClick={handleAppMode} sx={{color:'tomato'}}>Mode</Button>
+          <IconButton onClick={handleAppMode} sx={{color:'white'}}>
+              {
+                appMode === 'dark' ? <NightsStayIcon/> : <LightModeIcon/>
+              }
+            </IconButton>
         </Box>
       </Box>
     </>   

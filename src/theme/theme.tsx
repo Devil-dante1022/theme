@@ -145,16 +145,16 @@ export const light = createTheme({
   },
   palette: {
     primary: {
-      main: '#2196f3',
+      main: '#2F4F4F',
       contrastText:'white'
       
     },
     secondary: {
-      main: '#4158D0',
+      main: '#15253D',
       contrastText:'white'
     },
     text:{
-      primary: '#e91e63',
+      primary: '#26D6BB',
       secondary:'#26D6BB'
     }
   }

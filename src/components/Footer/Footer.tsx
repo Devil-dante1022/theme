@@ -62,7 +62,7 @@ const Footer = () => {
           <Box className={classes.footer}>
             {
               footerData.map((info,index) => (
-                <Item img={info.img} title={info.title} content={info.content} />
+                <Item key={index} img={info.img} title={info.title} content={info.content} />
               ))
             }
           </Box>
